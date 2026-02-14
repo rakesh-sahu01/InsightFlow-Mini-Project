@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback | InsightFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div style="display: flex; align-items: center; gap: 40px;">
+            <a href="index.html" class="brand"
+                style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                <div
+                    style="width: 32px; height: 32px; background: var(--brand-gradient); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+                    I</div>
+                <span class="brand-text">InsightFlow</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <div class="nav-links" id="main-nav-links">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="online-surveys.html" class="nav-item">Surveys</a>
+                <a href="enterprise.html" class="nav-item">Enterprise</a>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="login.html" class="nav-item guest-only">Log in</a>
+            <a href="signup.html" class="nav-item guest-only btn-primary" style="padding: 10px 20px; color: white;">Sign
+                up free</a>
+        </div>
+    </nav>
+
+    <section class="container mt-40">
+        <div class="reveal visible">
+            <div class="tagline">Customer Experience</div>
+            <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Listen to Your Customers</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; color: #475569;">Turn every interaction into an insight.
+                Boost retention and loyalty with automated feedback loops.</p>
+        </div>
+
+        <div class="stats-grid mt-40">
+            <div class="stat-card">
+                <h4>NPS & CSAT</h4>
+                <p>Industry-standard metrics at your fingertips.</p>
+            </div>
+            <div class="stat-card">
+                <h4>Churn Analysis</h4>
+                <p>Identify at-risk customers before they leave.</p>
+            </div>
+            <div class="stat-card">
+                <h4>Product Feedback</h4>
+                <p>Prioritize your roadmap based on real user needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="brand-text">InsightFlow</h2>
+            <p>Crafting insights that move the world.</p>
+            <div style="display: flex; justify-content: center; gap: 30px; opacity: 0.8;">
+                <a href="#">Privacy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+            <p style="margin-top: 40px; font-size: 0.9rem; opacity: 0.4;">&copy; 2026 InsightFlow Inc.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

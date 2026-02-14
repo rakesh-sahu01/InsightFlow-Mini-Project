@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | InsightFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .welcome-wrapper {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            text-align: center;
+            animation: fadeInWelcome 1.5s ease;
+        }
+
+        .search-pill {
+            background: #555;
+            color: #ddd;
+            padding: 12px 30px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 90%;
+            max-width: 500px;
+            margin-bottom: 200px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome-text {
+            font-size: 2.22rem;
+            color: #555;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+        }
+
+        @keyframes fadeInWelcome {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .loader-dots::after {
+            content: '...';
+            animation: dots 1.5s steps(5, end) infinite;
+        }
+
+        @keyframes dots {
+
+            0%,
+            20% {
+                content: '.';
+            }
+
+            40% {
+                content: '..';
+            }
+
+            60% {
+                content: '...';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="welcome-wrapper">
+        <div class="search-pill">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>Spotlight Search</span>
+        </div>
+
+        <h1 class="welcome-text">We're so glad you're here!</h1>
+    </div>
+
+    <script>
+        // Redirect to personalization page after a few seconds
+        setTimeout(() => {
+            window.location.href = 'personalize.html';
+        }, 3500);
+    </script>
+</body>
+
+</html>

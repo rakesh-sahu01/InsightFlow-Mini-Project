@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Surveys | InsightFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div style="display: flex; align-items: center; gap: 40px;">
+            <a href="index.html" class="brand"
+                style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                <div
+                    style="width: 32px; height: 32px; background: var(--brand-gradient); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+                    I</div>
+                <span class="brand-text">InsightFlow</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <div class="nav-links" id="main-nav-links">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="online-surveys.html" class="nav-item active">Surveys</a>
+                <a href="enterprise.html" class="nav-item">Enterprise</a>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="login.html" class="nav-item guest-only">Log in</a>
+            <a href="signup.html" class="nav-item guest-only btn-primary" style="padding: 10px 20px; color: white;">Sign
+                up free</a>
+        </div>
+    </nav>
+
+    <section class="container mt-40">
+        <div class="reveal visible">
+            <div class="tagline">Powerful Survey Tool</div>
+            <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Create Online Surveys in Minutes</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; color: #475569;">From simple polls to complex research
+                studies, InsightFlow provides the tools you need to capture the data that matters most.</p>
+        </div>
+
+        <div class="stats-grid mt-40">
+            <div class="stat-card">
+                <h4>Drag & Drop</h4>
+                <p>Easy builder with 20+ question types.</p>
+            </div>
+            <div class="stat-card">
+                <h4>Smart Logic</h4>
+                <p>Skip logic and branching for advanced flows.</p>
+            </div>
+            <div class="stat-card">
+                <h4>Real-time</h4>
+                <p>Watch responses roll in with live analytics.</p>
+            </div>
+        </div>
+
+        <div class="card mt-40" style="background: #f8fafc; border: none; padding: 60px; text-align: center;">
+            <h2 class="mb-20">Ready to start your first survey?</h2>
+            <p class="mb-30 text-muted">Join over 10,000+ companies using InsightFlow to make better decisions.</p>
+            <a href="signup.html" class="btn btn-primary">Get Started Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="brand-text">InsightFlow</h2>
+            <p>Crafting insights that move the world.</p>
+            <div style="display: flex; justify-content: center; gap: 30px; opacity: 0.8;">
+                <a href="#">Privacy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Cookies</a>
+            </div>
+            <p style="margin-top: 40px; font-size: 0.9rem; opacity: 0.4;">&copy; 2026 InsightFlow Inc.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research | InsightFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div style="display: flex; align-items: center; gap: 40px;">
+            <a href="index.html" class="brand"
+                style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                <div
+                    style="width: 32px; height: 32px; background: var(--brand-gradient); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+                    I</div>
+                <span class="brand-text">InsightFlow</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <div class="nav-links" id="main-nav-links">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="online-surveys.html" class="nav-item">Surveys</a>
+                <a href="enterprise.html" class="nav-item">Enterprise</a>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="login.html" class="nav-item guest-only">Log in</a>
+            <a href="signup.html" class="nav-item guest-only btn-primary" style="padding: 10px 20px; color: white;">Sign
+                up free</a>
+        </div>
+    </nav>
+
+    <section class="container mt-40">
+        <div class="reveal visible">
+            <div class="tagline">Strategic Insights</div>
+            <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Understand Your Market</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; color: #475569;">Stay ahead of the competition with global
+                audience panels and advanced statistical analysis tools.</p>
+        </div>
+
+        <div class="stats-grid mt-40">
+            <div class="stat-card">
+                <h4>Global Panels</h4>
+                <p>Access 100M+ respondents in 100+ countries.</p>
+            </div>
+            <div class="stat-card">
+                <h4>A/B Testing</h4>
+                <p>Test concepts, logos, and messaging instantly.</p>
+            </div>
+            <div class="stat-card">
+                <h4>Brand Tracking</h4>
+                <p>Monitor your brand health across demographics.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="brand-text">InsightFlow</h2>
+            <p>Crafting insights that move the world.</p>
+            <div style="display: flex; justify-content: center; gap: 30px; opacity: 0.8;">
+                <a href="#">Privacy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+            <p style="margin-top: 40px; font-size: 0.9rem; opacity: 0.4;">&copy; 2026 InsightFlow Inc.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

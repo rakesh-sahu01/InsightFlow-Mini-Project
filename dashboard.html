@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | InsightFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="dashboard-body">
+
+    <!-- Background Cinematic Container -->
+    <div id="cinematic-bg" class="bg-cinematic"></div>
+    <div class="bg-overlay"></div>
+    <!-- Navigation -->
+    <nav>
+        <div style="display: flex; align-items: center; gap: 40px;">
+            <a href="index.html" class="brand"
+                style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                <div
+                    style="width: 32px; height: 32px; background: var(--brand-gradient); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+                    I</div>
+                <span class="brand-text">InsightFlow</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <div class="nav-links" id="main-nav-links">
+                <a href="dashboard.html" class="nav-item active">Dashboard</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-item dropdown-toggle" onclick="toggleDropdown(event)">Product</a>
+                    <div class="dropdown-menu">
+                        <a href="online-surveys.html">Online Surveys</a>
+                        <a href="enterprise.html">Enterprise Solutions</a>
+                        <a href="index.html">Product Overview</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="nav-item dropdown-toggle" onclick="toggleDropdown(event)">Solutions</a>
+                    <div class="dropdown-menu">
+                        <a href="customer-feedback.html">Customer Feedback</a>
+                        <a href="employee-engagement.html">Employee Engagement</a>
+                        <a href="market-research.html">Market Research</a>
+                    </div>
+                </div>
+                <a href="integrations.html" class="nav-item">Integrations</a>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="login.html" class="nav-item guest-only">Login</a>
+            <a href="signup.html" class="nav-item guest-only btn-yellow"
+                style="color: black !important; text-decoration: none; padding: 8px 20px;">Sign Up</a>
+            <button class="nav-item auth-required text-danger" onclick="handleLogout()"
+                style="background: none; border: none; cursor: pointer; font-weight: 600;">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top: 40px;">
+        <!-- Public: Login -->
+        <div class="guest-only" style="display: flex; justify-content: center;">
+            <div class="card" style="max-width: 450px; width: 100%; text-align: center;">
+                <h2 class="mb-10">Sign in to InsightFlow</h2>
+                <p class="text-muted mb-30">Access your professional survey dashboard</p>
+                <button class="btn-social" onclick="showGoogleAccountSelector()">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="">
+                    Continue with Google
+                </button>
+                <div class="auth-divider">OR</div>
+                <form id="dashboard-login-form">
+                    <input type="email" placeholder="Email" required style="margin-bottom:12px;">
+                    <input type="password" placeholder="Password" required style="margin-bottom:12px;">
+                    <button type="submit" class="btn btn-primary" style="width:100%;">Sign In</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Auth: My Data -->
+        <div class="auth-required">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;">
+                <h3>Survey Overview</h3>
+                <button class="btn btn-primary" onclick="openCreationModal()">+ New Survey</button>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4 id="total-surveys-count">2</h4>
+                    <p>Surveys</p>
+                </div>
+                <div class="stat-card">
+                    <h4>4,502</h4>
+                    <p>Responses</p>
+                </div>
+                <div class="stat-card">
+                    <h4>88%</h4>
+                    <p>Completion</p>
+                </div>
+            </div>
+
+            <div class="mt-40">
+                <h3 class="mb-20">Recent Projects</h3>
+                <div class="surveys-list" id="surveys-container">
+                    <div class="survey-card">
+                        <div class="survey-tag" style="background:#e0f2fe; color:#0369a1;">RESEARCH</div>
+                        <div class="survey-title">Q1 Market Analysis</div>
+                        <div class="survey-stats">📊 1.2k Replies</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-40">
+                <h3 class="mb-20">Question Bank Preview</h3>
+                <div class="card" style="padding:0;">
+                    <div style="background:#f8f9fa; padding:15px; border-bottom:1px solid #eee; font-weight:700;">Active
+                        Questions</div>
+                    <div style="padding:20px;">
+                        <div style="margin-bottom:12px;">1. What is your primary use case for InsightFlow?</div>
+                        <div style="margin-bottom:12px;">2. How satisfied are you with our analytics?</div>
+                        <div>3. Do you have any feature requests?</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="google-modal" id="google-modal">
+        <div class="google-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" width="80" class="mb-20"
+                alt="">
+            <h3 class="mb-20">Choose an account</h3>
+            <div class="account-item" onclick="simulateGoogleLogin('Ananya Roy', 'ananya.roy@gmail.com')">
+                <div class="account-avatar"
+                    style="background-image: url('https://ui-avatars.com/api/?name=Ananya+Roy');"></div>
+                <div><b>Ananya Roy</b><br><small>ananya.roy@gmail.com</small></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="creation-modal" id="creation-modal">
+        <div class="creation-card">
+            <h3 class="mb-10">Create New Survey</h3>
+            <input type="text" id="new-survey-title" placeholder="Enter title..." class="mb-20">
+            <div style="display:flex; gap:10px;">
+                <button class="btn btn-secondary" onclick="closeCreationModal()">Back</button>
+                <button class="btn btn-primary" onclick="createNewSurvey()">Create</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrations | InsightFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div style="display: flex; align-items: center; gap: 40px;">
+            <a href="index.html" class="brand"
+                style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                <div
+                    style="width: 32px; height: 32px; background: var(--brand-gradient); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+                    I</div>
+                <span class="brand-text">InsightFlow</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <div class="nav-links" id="main-nav-links">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="online-surveys.html" class="nav-item">Surveys</a>
+                <a href="enterprise.html" class="nav-item">Enterprise</a>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="login.html" class="nav-item guest-only">Log in</a>
+            <a href="signup.html" class="nav-item guest-only btn-primary" style="padding: 10px 20px; color: white;">Sign
+                up free</a>
+        </div>
+    </nav>
+
+    <section class="container mt-40">
+        <div class="reveal visible">
+            <div class="tagline">Connected Ecosystem</div>
+            <h1 style="font-size: 3.5rem; margin-bottom: 20px;">InsightFlow + Your Stack</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; color: #475569;">Connect InsightFlow to the tools your
+                team already uses. Turn data into action automatically.</p>
+        </div>
+
+        <div class="surveys-list mt-40">
+            <div class="survey-card">
+                <div class="survey-tag" style="background:#f0f9ff; color:#0369a1;">CRM</div>
+                <div class="survey-title">Salesforce</div>
+                <div class="survey-stats">Sync survey data directly to lead profiles.</div>
+            </div>
+            <div class="survey-card">
+                <div class="survey-tag" style="background:#fdf2f8; color:#be185d;">COLLABORATION</div>
+                <div class="survey-title">Slack</div>
+                <div class="survey-stats">Get instant notifications for new responses.</div>
+            </div>
+            <div class="survey-card">
+                <div class="survey-tag" style="background:#f0fdf4; color:#15803d;">AUTOMATION</div>
+                <div class="survey-title">Zapier</div>
+                <div class="survey-stats">Connect to 5,000+ apps in seconds.</div>
+            </div>
+            <div class="survey-card">
+                <div class="survey-tag" style="background:#fff7ed; color:#c2410c;">MARKETING</div>
+                <div class="survey-title">Mailchimp</div>
+                <div class="survey-stats">Automate follow-up emails based on feedback.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="brand-text">InsightFlow</h2>
+            <p>Crafting insights that move the world.</p>
+            <div style="display: flex; justify-content: center; gap: 30px; opacity: 0.8;">
+                <a href="#">Privacy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">API Docs</a>
+            </div>
+            <p style="margin-top: 40px; font-size: 0.9rem; opacity: 0.4;">&copy; 2026 InsightFlow Inc.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

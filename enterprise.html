@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Solutions | InsightFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div style="display: flex; align-items: center; gap: 40px;">
+            <a href="index.html" class="brand"
+                style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                <div
+                    style="width: 32px; height: 32px; background: var(--brand-gradient); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+                    I</div>
+                <span class="brand-text">InsightFlow</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <div class="nav-links" id="main-nav-links">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="online-surveys.html" class="nav-item">Surveys</a>
+                <a href="enterprise.html" class="nav-item active">Enterprise</a>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="nav-item guest-only">Contact Sales</a>
+            <a href="login.html" class="nav-item guest-only">Log in</a>
+        </div>
+    </nav>
+
+    <section class="container mt-40">
+        <div class="reveal visible">
+            <div class="tagline">Enterprise Grade Performance</div>
+            <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Scale Your Insights Globally</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; color: #475569;">InsightFlow Enterprise provides the
+                security, compliance, and governance that modern organizations demand.</p>
+        </div>
+
+        <div class="stats-grid mt-40">
+            <div class="stat-card">
+                <h4>SSO & Security</h4>
+                <p>Enterprise-grade authentication and data encryption.</p>
+            </div>
+            <div class="stat-card">
+                <h4>Team Management</h4>
+                <p>Advanced role-based access control and workspace sharing.</p>
+            </div>
+            <div class="stat-card">
+                <h4>Dedicated Support</h4>
+                <p>24/7 priority support and a dedicated success manager.</p>
+            </div>
+        </div>
+
+        <div class="card mt-40"
+            style="background: #1e1b4b; color: white; border: none; padding: 60px; text-align: center;">
+            <h2 class="mb-20" style="color: white;">Trusted by Global Leaders</h2>
+            <p class="mb-30" style="color: #cbd5e1;">Meet the demands of your industry with InsightFlow.</p>
+            <button class="btn btn-primary" style="background: white; color: #1e1b4b; border: none;">Contact
+                Sales</button>
+        </div>
+    </section>
+
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="brand-text">InsightFlow</h2>
+            <p>Crafting insights that move the world.</p>
+            <div style="display: flex; justify-content: center; gap: 30px; opacity: 0.8;">
+                <a href="#">Privacy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Security</a>
+            </div>
+            <p style="margin-top: 40px; font-size: 0.9rem; opacity: 0.4;">&copy; 2026 InsightFlow Inc.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

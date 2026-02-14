@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightFlow | Smart Surveys, Actionable Insights</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="homepage-body">
+
+    <!-- Navigation -->
+    <nav>
+        <div style="display: flex; align-items: center; gap: 40px;">
+            <a href="index.html" class="brand"
+                style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+                <div
+                    style="width: 32px; height: 32px; background: var(--brand-gradient); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+                    I</div>
+                <span class="brand-text">InsightFlow</span>
+            </a>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <div class="nav-links" id="main-nav-links">
+                <div class="dropdown">
+                    <a href="#" class="nav-item dropdown-toggle" onclick="toggleDropdown(event)">Product <span
+                            style="font-size: 0.8rem; vertical-align: middle;">⌵</span></a>
+                    <div class="dropdown-menu">
+                        <a href="online-surveys.html">Online Surveys</a>
+                        <a href="enterprise.html">Enterprise Solutions</a>
+                        <a href="integrations.html">Integrations</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="nav-item dropdown-toggle" onclick="toggleDropdown(event)">Solutions <span
+                            style="font-size: 0.8rem; vertical-align: middle;">⌵</span></a>
+                    <div class="dropdown-menu">
+                        <a href="customer-feedback.html">Customer Feedback</a>
+                        <a href="employee-engagement.html">Employee Engagement</a>
+                        <a href="market-research.html">Market Research</a>
+                    </div>
+                </div>
+                <a href="#" class="nav-item">Enterprise</a>
+                <a href="#" class="nav-item">Pricing</a>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="nav-item guest-only" style="display: flex; align-items: center;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4a4a4a" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                </svg>
+            </a>
+            <a href="#" class="nav-item guest-only" style="text-decoration: none;">Contact Sales</a>
+            <a href="login.html" class="nav-item guest-only" style="text-decoration: none;">Log in</a>
+            <a href="signup.html" class="nav-item guest-only btn-yellow" style="text-decoration: none;">Sign up free</a>
+
+            <a href="dashboard.html" class="nav-item auth-required">My Dashboard</a>
+            <button class="nav-item auth-required text-danger" onclick="handleLogout()">Logout</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-container">
+        <div class="hero-left reveal">
+            <div class="tagline">Surveys and forms built for success</div>
+            <h1>Smarter surveys. <br>Actionable insights.</h1>
+            <p>Create beautiful, engaging surveys and forms that inspire powerful feedback and inform smarter business
+                decisions.</p>
+            <a href="signup.html" class="btn btn-primary"
+                style="padding: 18px 40px; font-size: 1.15rem; border-radius: 50px; text-decoration: none; font-weight: 600; background: var(--brand-gradient); border: none; box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);">Start
+                Free Trial</a>
+        </div>
+        <div class="hero-right reveal visible">
+            <img src="assets/images/dashboard-hero.jpg" alt="InsightFlow Dashboard Mockup">
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof reveal">
+        <h2>Trusted by forward-thinking teams across the globe</h2>
+        <div class="brand-logos">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png" alt="Uber"
+                style="height: 25px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Adidas"
+                style="height: 35px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung"
+                style="height: 20px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/McKesson_Logo.svg/1024px-McKesson_Logo.svg.png"
+                alt="McKesson" style="height: 25px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Ryanair_Logo_2013.svg/2560px-Ryanair_Logo_2013.svg.png"
+                alt="Ryanair" style="height: 30px;">
+        </div>
+    </section>
+
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="brand-text">InsightFlow</h2>
+            <p>Crafting insights that move the world.</p>
+            <div style="display: flex; justify-content: center; gap: 30px; opacity: 0.8;">
+                <a href="#">Privacy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Cookies Preferences</a>
+            </div>
+            <p style="margin-top: 40px; font-size: 0.9rem; opacity: 0.4;">&copy; 2026 InsightFlow Inc.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
